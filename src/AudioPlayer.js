@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./AudioPlayer.css";
 
-const AudioPlayer = ({ src }) => {
+const AudioPlayer = ({ currentTime, setCurrentTime, src }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
   const myRef = React.createRef();

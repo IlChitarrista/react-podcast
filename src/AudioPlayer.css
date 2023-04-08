@@ -1,5 +1,5 @@
 .AudioPlayer {
-  background-color: black;
+  background-color: var(--background1);
   border-radius: 0.5em;
   padding: 1em;
   width: fit-content;

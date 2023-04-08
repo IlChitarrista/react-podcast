@@ -1,0 +1,55 @@
+:root {
+  --background0: #264653;
+  --background1: #2a9d8f;
+  --background2: #e9c46a;
+  --background3: #f4a261;
+  --background4: #e76f51;
+}
+
+body {
+  background-color: var(--background0);
+}
+
+p,
+h1,
+h2,
+h3 {
+  color: var(--background3);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 1em;
+}
+
+#header img {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  border-radius: 10em;
+  object-fit: cover;
+  border: 3px solid var(--background3);
+}
+
+#header .column {
+  flex: 33.33%;
+}
+
+#header h1 {
+  text-align: center;
+}
+
+#header h2 {
+  margin: 0 0 1em 0;
+}
+
+#header h3 {
+  width: fit-content;
+  margin: 0 1em;
+}
+
+#img {
+  display: flex;
+}
