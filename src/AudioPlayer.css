@@ -1,0 +1,28 @@
+.AudioPlayer {
+  background-color: black;
+  border-radius: 0.5em;
+  padding: 1em;
+  width: fit-content;
+  margin: 1em auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.AudioPlayer .progress {
+  display: flex;
+  gap: 1em;
+}
+
+.AudioPlayer .progress p {
+  display: inline;
+  color: white;
+}
+
+.AudioPlayer .buttons {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  gap: 1em;
+}
