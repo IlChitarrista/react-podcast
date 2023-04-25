@@ -51,7 +51,7 @@ function App() {
           setCurrentTime={setMusicTime}
         />
         <p>{data.comment.text}</p>
-        <object data={data.comment.pdf} />
+        <object data="./Podcast.pdf" />
       </div>
     </div>
   );

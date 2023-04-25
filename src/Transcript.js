@@ -28,7 +28,7 @@ const Transcript = ({ data }) => {
             return (
               <div key={idx}>
                 <h4>{paragraph.title}</h4>
-                <p>{paragraph.text}</p>
+                <p className="pad">{paragraph.text}</p>
               </div>
             );
           })

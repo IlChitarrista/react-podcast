@@ -230,7 +230,7 @@ const data = {
   comment: {
     title: "Omaggio a Wardi",
     text: "La Musica per l'Intro e L'Outro è stata realizzata da Me come simpatico Omaggio alla figura di Verdi e Wagner. Sono presenti alcuni vaghi riferimenti ai loro stili e, per lo più, un po' di sana comicità.",
-    pdf: "./Podcast Verdi Wagner.pdf",
+    pdf: "./Podcast.pdf",
     music: "./Omaggio-a-Wardi.opus",
     length: 100,
   },
