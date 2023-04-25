@@ -1,18 +1,18 @@
+import {
+  faBackward,
+  faForward,
+  faPause,
+  faPlay,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import "./AudioPlayer.css";
 
-const AudioPlayer = ({ currentTime, setCurrentTime, src }) => {
+const AudioPlayer = ({ currentTime, setCurrentTime, src, length }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [duration, setDuration] = useState(0);
 
   const myRef = React.createRef();
   const myInput = React.createRef();
-
-  useEffect(() => {
-    setTimeout(() => {
-      setDuration(myRef.current.duration);
-    }, 100);
-  }, []);
 
   const onPlayPause = () => {
     setIsPlaying(!isPlaying);
@@ -26,6 +26,9 @@ const AudioPlayer = ({ currentTime, setCurrentTime, src }) => {
   const onTimeUpdate = () => {
     setCurrentTime(myRef.current.currentTime);
     myInput.current.value = (currentTime * 100) / myRef.current.duration;
+    if (Math.round(myRef.current.currentTime) >= length) {
+      setIsPlaying(false);
+    }
   };
 
   const formatTime = (time) => {
@@ -53,7 +56,7 @@ const AudioPlayer = ({ currentTime, setCurrentTime, src }) => {
 
   return (
     <div className="AudioPlayer">
-      <audio ref={myRef} onTimeUpdate={onTimeUpdate}>
+      <audio preload="metadata" ref={myRef} onTimeUpdate={onTimeUpdate}>
         <source src={src} type="audio/mpeg"></source>
       </audio>
       <div className="progress">
@@ -66,12 +69,22 @@ const AudioPlayer = ({ currentTime, setCurrentTime, src }) => {
           defaultValue="0"
           onChange={handleScrub}
         ></input>
-        <p>{formatTime(duration)}</p>
+        <p>{formatTime(length)}</p>
       </div>
       <div className="buttons">
-        <button onClick={onSkipBehind}>-10</button>
-        <button onClick={onPlayPause}>{isPlaying ? "Pause" : "Play"}</button>
-        <button onClick={onSkipForward}>+10</button>
+        <button onClick={onSkipBehind}>
+          <FontAwesomeIcon icon={faBackward} />
+        </button>
+        <button onClick={onPlayPause} className="play">
+          {isPlaying ? (
+            <FontAwesomeIcon icon={faPause} />
+          ) : (
+            <FontAwesomeIcon icon={faPlay} />
+          )}
+        </button>
+        <button onClick={onSkipForward}>
+          <FontAwesomeIcon icon={faForward} />
+        </button>
       </div>
     </div>
   );

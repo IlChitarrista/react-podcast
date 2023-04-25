@@ -4,17 +4,28 @@
   --background2: #e9c46a;
   --background3: #f4a261;
   --background4: #e76f51;
+
+  --light-lime: #abd699;
+  --fresh-lemon: #ffe26a;
+  --teal: #75c9b7;
+  --mint: #c7ddcc;
+  --navy: #16123f;
 }
 
 body {
-  background-color: var(--background0);
+  background-image: linear-gradient(
+    135deg,
+    var(--light-lime),
+    var(--fresh-lemon)
+  );
 }
 
 p,
 h1,
 h2,
-h3 {
-  color: var(--background3);
+h3,
+h4 {
+  color: black;
 }
 
 #header {
@@ -27,10 +38,13 @@ h3 {
 #header img {
   width: 100px;
   height: 100px;
-  margin-left: auto;
   border-radius: 10em;
   object-fit: cover;
-  border: 3px solid var(--background3);
+  border: 3px solid var(--navy);
+}
+
+#header a {
+  margin-left: auto;
 }
 
 #header .column {
@@ -45,11 +59,74 @@ h3 {
   margin: 0 0 1em 0;
 }
 
-#header h3 {
-  width: fit-content;
-  margin: 0 1em;
-}
-
 #img {
   display: flex;
+}
+
+a {
+  transition: all 0.5s;
+}
+
+a:hover {
+  transform: scale(110%);
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  max-width: 70vw;
+  margin: 1em auto;
+  border: 1px solid var(--navy);
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.comment h3 {
+  margin: 0.5em 0;
+}
+
+.comment object {
+  width: 70vw;
+  height: 70vh;
+  margin: auto;
+  border-radius: 1em;
+}
+
+button {
+  border-radius: 0.5em;
+  border: none;
+  padding: 0.25em 0.5em;
+  transition: all 0.2s;
+}
+
+button:hover {
+  transform: scale(110%);
+}
+
+h1 {
+  text-decoration: underline;
+  text-decoration-color: var(--fresh-lemon);
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-color: var(--navy) var(--light-lime);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--light-lime);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--navy);
+  border-radius: 1em;
+}
+
+.content::-webkit-scrollbar-track {
+  border-radius: 1em;
 }

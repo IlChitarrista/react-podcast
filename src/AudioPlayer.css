@@ -1,10 +1,15 @@
 .AudioPlayer {
-  background-color: var(--background1);
+  background-image: linear-gradient(
+    -45deg,
+    var(--teal) 0%,
+    var(--fresh-lemon) 135%
+  );
+  border: 1px solid var(--navy);
   border-radius: 0.5em;
   padding: 1em;
-  width: fit-content;
+  min-width: 10px;
+  max-width: fit-content;
   margin: 1em auto;
-
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -13,11 +18,14 @@
 .AudioPlayer .progress {
   display: flex;
   gap: 1em;
+  margin: auto;
 }
 
 .AudioPlayer .progress p {
   display: inline;
-  color: white;
+  text-align: center;
+  min-width: fit-content;
+  width: 40px;
 }
 
 .AudioPlayer .buttons {
@@ -25,4 +33,49 @@
   width: fit-content;
   margin: auto;
   gap: 1em;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  min-width: fit-content;
+  max-width: 100em;
+}
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--mint);
+  height: 0.5rem;
+  border-radius: 1em;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: var(--mint);
+  height: 0.5rem;
+  border-radius: 1em;
+}
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: var(--fresh-lemon);
+  border: 1px solid var(--navy);
+  border-radius: 1em;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+button {
+  background-color: var(--fresh-lemon);
+  border: 1px solid var(--navy);
+}
+
+.play {
+  min-width: fit-content;
+  width: 3em;
 }

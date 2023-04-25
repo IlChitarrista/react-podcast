@@ -1,0 +1,30 @@
+.transcript {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  max-width: 70vw;
+  margin: auto;
+  padding: 1em;
+  border: 1px solid var(--navy);
+  border-radius: 1em;
+}
+
+.subtitle {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subtitle h3 {
+  margin: 0.5em 0;
+}
+
+.subtitle button {
+  height: fit-content;
+}
+
+.content {
+  max-height: 800px;
+  overflow-y: scroll;
+}
