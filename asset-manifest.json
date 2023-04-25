@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-podcast/static/css/main.56727ab5.css",
+    "main.js": "/react-podcast/static/js/main.b02a873c.js",
+    "static/js/787.b9faf2fa.chunk.js": "/react-podcast/static/js/787.b9faf2fa.chunk.js",
+    "static/media/Me.jpg": "/react-podcast/static/media/Me.df1edd34c7923d1e1c18.jpg",
+    "index.html": "/react-podcast/index.html",
+    "main.56727ab5.css.map": "/react-podcast/static/css/main.56727ab5.css.map",
+    "main.b02a873c.js.map": "/react-podcast/static/js/main.b02a873c.js.map",
+    "787.b9faf2fa.chunk.js.map": "/react-podcast/static/js/787.b9faf2fa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56727ab5.css",
+    "static/js/main.b02a873c.js"
+  ]
+}
