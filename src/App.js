@@ -9,7 +9,7 @@ import data from "./Data";
 function App() {
   const [currentTime, setCurrentTime] = useState(0);
   const [musicTime, setMusicTime] = useState(0);
-
+import podCastPDF from "./Podcast.pdf";
   return (
     <div className="App">
       <Helmet>
@@ -51,7 +51,18 @@ function App() {
           setCurrentTime={setMusicTime}
         />
         <p>{data.comment.text}</p>
-        <object data="./Podcast.pdf" />
+        	{/* <object data="./Podcast.pdf" /> */}
+
+				<object
+					data={podCastPDF}
+					type='application/pdf'
+					width='100%'
+					height='100%'
+				>
+					<p>
+						I can't view the pdf - I'm including the link <a href={podCastPDF}>to the PDF!</a>
+					</p>
+				</object>
       </div>
     </div>
   );
